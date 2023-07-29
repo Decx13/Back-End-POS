@@ -13,7 +13,7 @@ public class HttpFilter extends javax.servlet.http.HttpFilter {
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
         String origin = req.getHeader("Origin");
         System.out.println(origin);
-        if(origin!=null && ((origin.contains("http://localhost") || (origin.contains("https://decx13.github.io/frontend/"))))){
+        if(origin!=null && ((origin.contains("http://localhost") || (origin.contains("https://decx13.github.io"))))){
             res.setHeader("Access-Control-Allow-Origin", req.getHeader("Origin"));
             res.setHeader("Access-Control-Allow-Credentials", "true");
             res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
